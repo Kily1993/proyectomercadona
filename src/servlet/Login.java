@@ -68,6 +68,7 @@ public class Login extends HttpServlet {
 			try {
 				rs = c.query("select usuario,password from cliente where usuario='"+user+"' and password='"+pwd+"';");
 				if(rs.next()){
+					request.getSession().setAttribute("dato", user);
 					request.setAttribute("nombre_user", user);
 					request.getRequestDispatcher("jsp/menu.jsp").forward(request,response);
 				}else{

@@ -18,7 +18,7 @@
 </head>
 <body>
 
-	<h3>${nombre_user} ha iniciado sesión</h3>
+	<%= session.getAttribute("dato") %>
 	
 	<div class="container-fluid">
 		<div class="row text-center">
